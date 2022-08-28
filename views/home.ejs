@@ -1,0 +1,22 @@
+<%-include("partials/header")-%>
+
+<h1>Home</h1>
+
+<p>  <%=startingContent%></p>
+
+
+<% posttext.forEach(function(post){%>
+  <h1><%=post.box%></h1>
+  <p><%=post.content.substring(0, 100)+ "..."%>
+  <a href="posts/<%=post.box%>">Read more</a>
+  </p>
+
+<%})%>
+<!-- <form action="/compose" method="post">
+  <button type="submit" name="button">Compose New one</button>
+</form> -->
+
+
+
+
+<%-include("partials/footer")-%>
